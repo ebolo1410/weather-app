@@ -4,15 +4,24 @@ const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
+const secret = document.querySelector('.secret');
 
 search.addEventListener('click', () => {
 
     const APIKey = '6584dc063e43f4ac513b5899deecabb5';
     const city = document.querySelector('.search-box input').value;
 
-    if (city === '')
-        return;
+    if (city === ''){
+        return;}
 
+    else if (city == 'Người yêu Nhi péo'){
+        container.style.height = '400px';
+        weatherBox.style.display = 'none';
+        weatherDetails.style.display = 'none';
+        secret.style.display = 'block';
+        secret.classList.add('fadeIn');
+        return;}
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
