@@ -14,7 +14,7 @@ search.addEventListener('click', () => {
     if (city === ''){
         return;}
 
-    else if (city == 'Người yêu Nhi péo'){
+    else if (city == 'NGƯỜI YÊU NHI PÉO'){
         container.style.height = '400px';
         weatherBox.style.display = 'none';
         weatherDetails.style.display = 'none';
